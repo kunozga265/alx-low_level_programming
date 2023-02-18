@@ -16,19 +16,22 @@ int main(void)
 	{
 		for (y = 0; y < 9; y++)
 		{
-			for (k = y; k < 10; k++)
+			for (k = i; k < 10; k++)
 			{
-				for (j = y + 1; j < 10; j++)
+				for (j = y; j < 10; j++)
 				{
-					putchar(i + '0');
-					putchar(y + '0');
-					putchar(32);
-					putchar(k + '0');
-					putchar(j + '0');
-					if (i != 9 || y != 8 || k != 9 || j != 9)
+					if ((i != k) || (y != j))
 					{
-						putchar(',');
+						putchar(i + '0');
+						putchar(y + '0');
 						putchar(32);
+						putchar(k + '0');
+						putchar(j + '0');
+						if (i != 9 || y != 8 || k != 9 || j != 9)
+						{
+							putchar(',');
+							putchar(32);
+						}
 					}
 				}
 			}
