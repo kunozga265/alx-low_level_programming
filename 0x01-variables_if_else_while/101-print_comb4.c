@@ -14,27 +14,21 @@ int main(void)
 
 	while (i < 8)
 	{
-		for (y = 0; y < 9; y++)
+		for (y = i + 1; y < 9; y++)
 		{
-			if (y > i)
+			for (j = 0; j < 10; j++)
 			{
-				for (j = 0; j < 10; j++)
+				if (j > y)
 				{
-					if (j > y)
+					putchar(i + '0');
+					putchar(y + '0');
+					putchar(j + '0');
+					if (i != 7 || y != 8 || j != 9)
 					{
-						putchar(i + '0');
-						putchar(y + '0');
-						putchar(j + '0');
-						if (i != 7 || y != 8 || j != 9)
-						{
-							putchar(',');
-							putchar(32);
-						}
-
+						putchar(',');
+						putchar(32);
 					}
-
 				}
-
 			}
 		}
 		i++;
