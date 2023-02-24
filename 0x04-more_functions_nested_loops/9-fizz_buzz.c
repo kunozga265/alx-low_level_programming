@@ -4,9 +4,9 @@
  * main - entry point
  * Return: Always 0
  */
-void main(void)
+int main(void)
 {
-	int x, y;
+	int x;
 
 	for (x = 1; x <= 100; x++)
 	{
@@ -36,4 +36,5 @@ void main(void)
 			printf("\n");
 		}
 	}
+	return (0);
 }
