@@ -19,9 +19,6 @@ void print_array(int *s, int n)
 		{
 			printf(", ");
 		}
-		else
-		{
-			printf("\n");
-		}
 	}
+	printf("\n");
 }
