@@ -25,7 +25,10 @@ char *_strstr(char *haystack, char *needle)
 					break;
 				}
 			}
-			break;
+			if (check == 1)
+			{
+				break;
+			}
 		}
 	}
 	if (check == 1)
