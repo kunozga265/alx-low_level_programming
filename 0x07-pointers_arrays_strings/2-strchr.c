@@ -22,7 +22,7 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	if (check = 1)
+	if (check == 1)
 	{
 		return (s + i);
 	}
