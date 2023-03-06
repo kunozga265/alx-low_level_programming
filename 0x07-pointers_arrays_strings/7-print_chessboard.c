@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _print_chessboard - prints array
+ * print_chessboard - prints array
  * @a: multidimension array
- * Description: Prints array
+ *
+ * Description: Prints multidimensional array
  * Return: Nothing
  */
 void print_chessboard(char (*a)[8])
