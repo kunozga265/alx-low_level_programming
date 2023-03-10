@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * print_cents - calculates cents
@@ -35,6 +36,29 @@ int print_cents(int n)
 }
 
 /**
+ * isNumber - checks if argv is a number
+ * @number: array of characters
+ * Return: 0 if success
+ */
+int isNumber(char number[])
+{
+	int i = 0;
+
+	if (number[0] == '-')
+	{
+		return (0);
+	}
+	for (; number[i] != 0; i++)
+	{
+		if (!isdigit(number[i]))
+		{
+			return (0);
+		}
+	}
+	return (1);
+}
+
+/**
  * main - entry point
  * @argc: argument count
  * @argv: argument values
@@ -44,7 +68,7 @@ int main(int argc, char *argv[])
 {
 	int n;
 
-	if (argc == 2)
+	if (argc == 2 && isNumber(argv[1]))
 	{
 		n = atoi(argv[1]);
 		if (n < 0)
